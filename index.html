@@ -98,6 +98,56 @@
     .filter-btn:hover {
   box-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(59, 130, 246, 0.4);
 }
+#brimmbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#brimmbot-button {
+  background-color: #5D3FD3;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 0 15px #a684ff;
+  animation: blink 1.5s infinite;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.speech-bubble {
+  background-color: white;
+  color: #5D3FD3;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+#brimmbot-frame {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
 
   </style>
 </head>
@@ -437,7 +487,20 @@
 </script>
 
 
-
+<!-- BrimmBot Widget -->
+<div id="brimmbot-widget">
+  <div id="brimmbot-button" onclick="toggleBrimmBot()">
+    🤖
+    <span class="speech-bubble">Ask me anything about Tatiana!</span>
+  </div>
+  <iframe id="brimmbot-frame" src="brimmbot.html" style="display:none;"></iframe>
+</div>
+<script>
+  function toggleBrimmBot() {
+    const frame = document.getElementById("brimmbot-frame");
+    frame.style.display = frame.style.display === "none" ? "block" : "none";
+  }
+</script>
 </body>
 </html>
 

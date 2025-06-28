@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brimm Bot</title>
+  <link rel="stylesheet" href="brimmbot.style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <div class="left">
+        <div class="avatar">🤖</div>
+        <div class="header-info">
+          <h2>Brimm Bot</h2>
+          <p class="status">• Online</p>
+        </div>
+      </div>
+      <div class="right">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="chat-box" id="chat-box"></div>
+
+    <form id="chat-form" class="chat-input-area">
+      <input type="text" id="user-input" placeholder="Type your message..." required />
+      <button type="submit">➤</button>
+    </form>
+  </div>
+
+  <script src="brimmbot.script.js"></script>
+</body>
+</html>
+
+
