@@ -29,7 +29,7 @@ body {
 
 .chat-container {
   width: 100%;
-  max-width: 600px; /* increased from 400px */
+  max-width: 700px; /* increased from 400px */
   height: 90vh;     /* give it more height */
   background-color: var(--chat-bg);
   border-radius: 16px;
@@ -99,15 +99,14 @@ body {
 
 
 .message {
-  padding: 12px 16px;
-  border-radius: 14px;
   max-width: 85%;
-  line-height: 1.6;           /* increased from 1.4 */
-  font-size: 1rem;
-  white-space: pre-wrap;      /* preserves line breaks */
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 12px;
   word-wrap: break-word;
-  max-height: 300px;
-  overflow-y: auto;
+  font-size: 16px; /* bump this up too if needed */
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 .user-msg {
