@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App | Tatiana Brimm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans leading-relaxed">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 text-white p-6 flex justify-between items-center shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">TB</div>
+    <div class="space-x-6">
+      <a href="../index.html" class="nav-link text-sm font-medium hover:text-purple-400 transition">Home</a>
+      <a href="../projects.html" class="nav-link text-sm font-medium hover:text-purple-400 transition">Projects</a>
+      <a href="../contact.html" class="nav-link text-sm font-medium hover:text-purple-400 transition">Contact</a>
+      <a href="#" class="nav-link text-sm font-medium hover:text-purple-400 transition coming-soon">Services</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-28 max-w-5xl mx-auto px-6 pb-16">
+    <!-- Tags -->
+    <div class="mb-4 flex gap-2">
+      <span class="px-3 py-1 bg-indigo-700 rounded-full text-sm">#API</span>
+      <span class="px-3 py-1 bg-purple-700 rounded-full text-sm">#weather</span>
+      <span class="px-3 py-1 bg-purple-700 rounded-full text-sm">#frontend</span>
+      <span class="px-3 py-1 bg-purple-700 rounded-full text-sm">#backend</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Weather Forecast App</h1>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap gap-4 mb-10">
+      <a href="https://your-weather-app-link.com" target="_blank" class="px-5 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-semibold hover:opacity-90">
+        ☀️ Live Demo
+      </a>
+    </div>
+
+    <!-- What Is It -->
+    <section class="mb-12 text-center bg-gray-800/50 rounded-xl shadow-lg p-8 border border-pink-500/20">
+      <h2 class="text-3xl font-bold mb-4 text-pink-400 drop-shadow-[0_0_6px_rgba(255,105,180,0.6)]">
+        What Is It?
+      </h2>
+      <p class="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+        This <span class="font-semibold text-purple-300">Weather Forecast App</span> is a lightweight tool that allows users to get current weather conditions for any city. It fetches real-time data from a public weather API and presents it with a clean, simple UI.
+        <br/><br/>
+        I created it as part of my full-stack learning journey — it’s a practical way to demonstrate API calls, asynchronous logic, and clean design.
+      </p>
+    </section>
+
+    <!-- Why I Built It -->
+    <section class="mb-12 text-center bg-gray-800/50 rounded-xl shadow-lg p-8 border border-purple-500/20">
+      <h2 class="text-3xl font-bold mb-4 text-pink-400 drop-shadow-[0_0_6px_rgba(255,105,180,0.6)]">
+        Why I Built It
+      </h2>
+      <p class="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+        I wanted a quick project that strengthened my understanding of APIs and full-stack workflows. Building this app helped me practice using <span class="text-purple-300 font-semibold">fetch()</span>, handling <span class="text-purple-300 font-semibold">JSON responses</span>, and creating a responsive UI.
+        <br/><br/>
+        It also laid the foundation for future apps that use external APIs for things like data analytics, automation, or AI.
+      </p>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="mb-12 text-center bg-gray-800/50 rounded-xl shadow-lg p-8 border border-indigo-500/20">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-300 drop-shadow-[0_0_6px_rgba(100,180,255,0.6)]">
+        Tech Stack
+      </h2>
+      <ul class="list-none space-y-2 text-white/90 text-lg max-w-md mx-auto">
+        <li><span class="text-indigo-400 font-semibold">🧩 HTML + Tailwind CSS</span> — for layout and styling</li>
+        <li><span class="text-indigo-400 font-semibold">⚙️ JavaScript</span> — for API calls and client logic</li>
+        <li><span class="text-indigo-400 font-semibold">🌐 OpenWeatherMap API</span> — for real-time weather data</li>
+        <li><span class="text-indigo-400 font-semibold">🧪 FastAPI</span> — used for optional backend routing & practice</li>
+      </ul>
+    </section>
+
+    <!-- Why I Chose This Stack -->
+    <section class="mb-12 text-center bg-gray-800/50 rounded-xl shadow-lg p-8 border border-indigo-400/20">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-300 drop-shadow-[0_0_6px_rgba(100,180,255,0.6)]">
+        Why I Chose This Stack
+      </h2>
+      <p class="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+        I picked this stack because it reflects the core of what I’m currently learning: <span class="text-purple-300 font-semibold">frontend + backend</span> integration, live API consumption, and performance-focused design.
+        <br/><br/>
+        Tailwind keeps the layout clean, JavaScript manages logic, and I used FastAPI to explore backend routing. It’s a well-balanced tech combo for small but mighty projects.
+      </p>
+    </section>
+
+    <!-- Try It Out -->
+    <section class="mb-12 text-center bg-gray-800/50 rounded-xl shadow-lg p-8 border border-gray-700/20">
+      <h2 class="text-3xl font-bold mb-4 text-gray-300 drop-shadow-[0_0_6px_rgba(200,200,200,0.5)]">
+        Try It Out!
+      </h2>
+      <div class="mb-6">
+    <img src="../images/Weather App.png" alt="LA Crime Jupyter Notebook Output" class="rounded-xl shadow-xl mx-auto w-full max-w-3xl" />
+  </div>
+      <p class="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+        🌦️ Enter a city name and see the current forecast — it's simple, quick, and fully responsive.
+        <br/><br/>
+        Curious? Head to the <a href="https://your-weather-app-link.com" class="underline text-purple-400 hover:text-purple-300 font-medium">live demo</a> and test it out!
+      </p>
+    </section>
+
+    <!-- Back to Projects -->
+    <div class="flex justify-center mt-16 mb-10">
+      <a href="../projects.html" class="px-6 py-3 bg-gray-800 hover:bg-purple-700 transition rounded-lg shadow-md text-white font-semibold">
+        ← Back to Projects
+      </a>
+    </div>
+  </main>
+
+  <!-- BrimmBot Widget -->
+<div id="brimmbot-widget">
+  <div id="brimmbot-button" onclick="toggleBrimmBot()">
+    🤖
+    <span class="speech-bubble">Ask me anything about Tatiana!</span>
+  </div>
+  <iframe id="brimmbot-frame" src="../brimmbot.html" style="display:none;"></iframe>
+</div>
+<script>
+  function toggleBrimmBot() {
+    const frame = document.getElementById("brimmbot-frame");
+    frame.style.display = frame.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+</body>
+</html>
+
