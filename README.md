@@ -10,7 +10,7 @@ This site showcases who I am, what I build, and how I think as a Full Stack Deve
 
 ## 🚀 Live Site
 
-👉 [https://yourdomain.com](https://tatianabrimm.com)
+👉 [Portfolio Website](https://tatianabrimm.com)
 
 ---
 
