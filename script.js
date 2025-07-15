@@ -128,6 +128,15 @@ function downloadResume() {
 }
 
 // Skills filtering
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Script loaded and DOM ready")
+
+  const defaultButton = document.querySelector(".filter-btn[data-filter='main']")
+  if (defaultButton) {
+    filterSkills("main", defaultButton)
+  }
+})
+
 function filterSkills(category, button) {
   const skills = document.querySelectorAll(".skill-card")
   const buttons = document.querySelectorAll(".filter-btn")
