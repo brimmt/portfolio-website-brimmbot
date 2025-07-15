@@ -138,21 +138,21 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 function filterSkills(category, button) {
-  const skills = document.querySelectorAll(".skill-card")
-  const buttons = document.querySelectorAll(".filter-btn")
+  const skills = document.querySelectorAll(".skill-card");
+  const buttons = document.querySelectorAll(".filter-btn");
 
   // Update active button
-  buttons.forEach((btn) => btn.classList.remove("active"))
-  button.classList.add("active")
+  buttons.forEach((btn) => btn.classList.remove("active"));
+  button.classList.add("active");
 
-  // Filter skills
+  // Filter skills using data attribute
   skills.forEach((skill) => {
-    if (skill.classList.contains(category)) {
-      skill.style.display = "flex"
+    if (skill.dataset.category === category) {
+      skill.style.display = "flex";
     } else {
-      skill.style.display = "none"
+      skill.style.display = "none";
     }
-  })
+  });
 }
 
 // Project filtering
