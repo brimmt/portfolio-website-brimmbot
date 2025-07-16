@@ -1,5 +1,5 @@
 document.getElementById("chat-form").addEventListener("submit", async (e) => {
-  e.preventDefault(); // prevents default form behavior
+  e.preventDefault();
 
   const userInput = document.getElementById("user-input").value;
   if (!userInput.trim()) return;
@@ -12,10 +12,9 @@ document.getElementById("chat-form").addEventListener("submit", async (e) => {
   userBubble.textContent = userInput;
   chatBox.appendChild(userBubble);
 
-  // Clear input field
   document.getElementById("user-input").value = "";
 
-  // Show "typing" indicator
+  // Typing indicator
   const botTyping = document.createElement("div");
   botTyping.className = "message bot-msg typing-indicator";
   botTyping.innerHTML = `
@@ -26,48 +25,32 @@ document.getElementById("chat-form").addEventListener("submit", async (e) => {
   chatBox.appendChild(botTyping);
   chatBox.scrollTop = chatBox.scrollHeight;
 
- try {
-  const res = await fetch("https://brimmbot-backend.onrender.com/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ user_input: userInput })
-  });
-
-  const data = await res.json();
-
-  // Create final bot reply bubble
-  const replyBubble = document.createElement("div");
-  replyBubble.className = "message bot-msg";
-  replyBubble.textContent = data.reply;
-
-  // Auto-collapse long replies
-  if (data.reply.length > 300) {
-    replyBubble.classList.add("collapsed");
-    replyBubble.addEventListener("click", () => {
-      replyBubble.classList.toggle("collapsed");
+  try {
+    const res = await fetch("https://brimmbot-backend.onrender.com/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_input: userInput })
     });
-  }
 
-  chatBox.appendChild(replyBubble);
-  chatBox.scrollTop = chatBox.scrollHeight;
+    const data = await res.json();
 
-} catch (error) {
-  console.error("BrimmBot API error:", error);
+    const replyBubble = document.createElement("div");
+    replyBubble.className = "message bot-msg";
+    replyBubble.textContent = data.reply;
 
-  const errorBubble = document.createElement("div");
-  errorBubble.className = "message bot-msg";
-  errorBubble.textContent = "⚠️ BrimmBot couldn’t connect. Please try again later!";
-  chatBox.appendChild(errorBubble);
-  chatBox.scrollTop = chatBox.scrollHeight;
-}
+    if (data.reply.length > 300) {
+      replyBubble.classList.add("collapsed");
+      replyBubble.addEventListener("click", () => {
+        replyBubble.classList.toggle("collapsed");
+      });
+    }
 
-    // Replace typing indicator with final message
+    // Replace typing with reply
     botTyping.replaceWith(replyBubble);
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-} catch (err) {
-  console.error(err);
-  botTyping.outerHTML = `<div class="message bot-msg">Oops! Something went wrong.</div>`;
-}
-
-// This line should be *outside* the try/catch but still within the event handler
-chatBox.scrollTop = chatBox.scrollHeight;
+  } catch (error) {
+    console.error("BrimmBot API error:", error);
+    botTyping.outerHTML = `<div class="message bot-msg">⚠️ BrimmBot couldn’t connect. Please try again later!</div>`;
+  }
+});
