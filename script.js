@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closeSuccessPopup();
     }
   });
-});
+;
 
 // Smooth scrolling function
 function scrollToSection(sectionId) {
@@ -128,32 +128,39 @@ function downloadResume() {
 }
 
 // Skills filtering
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Script loaded and DOM ready")
 
-  const defaultButton = document.querySelector(".filter-btn[data-filter='main']")
-  if (defaultButton) {
-    filterSkills("main", defaultButton)
-  }
-})
 
-function filterSkills(category, button) {
-  const skills = document.querySelectorAll(".skill-card");
-  const buttons = document.querySelectorAll(".filter-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const skillCards = document.querySelectorAll(".skill-card");
 
-  // Update active button
-  buttons.forEach((btn) => btn.classList.remove("active"));
-  button.classList.add("active");
-
-  // Filter skills using data attribute
-  skills.forEach((skill) => {
-    if (skill.dataset.category === category) {
-      skill.style.display = "flex";
-    } else {
-      skill.style.display = "none";
-    }
+  // Show only 'main' cards by default
+  skillCards.forEach(card => {
+    card.style.display = card.classList.contains("main") ? "flex" : "none";
   });
-}
+
+  // 👉 Make sure the 'Main Skills' button shows as active on load
+  const defaultButton = document.querySelector(".filter-btn[data-filter='main']");
+  if (defaultButton) {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    defaultButton.classList.add("active");
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      // Toggle active button styles
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Show matching cards, hide others
+      skillCards.forEach(card => {
+        card.style.display = card.classList.contains(filter) ? "flex" : "none";
+      });
+    });
+  });
+});
 
 // Project filtering
 function filterProjects(category) {

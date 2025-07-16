@@ -116,141 +116,141 @@
         
         <!-- Filter Buttons -->
         <div class="mb-10 flex flex-wrap justify-center gap-4">
-            <button class="filter-btn active flex items-center justify-center gap-2 px-4 py-2" data-filter="main" onclick="filterSkills('main', this)">
-                <i class="fas fa-star"></i> Main Skills
-            </button>
-            <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="frontend" onclick="filterSkills('frontend', this)">
-                <i class="fas fa-paint-brush"></i> Frontend
-            </button>
-            <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="backend" onclick="filterSkills('backend', this)">
-                <i class="fas fa-server"></i> Backend
-            </button>
-            <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="ai" onclick="filterSkills('ai', this)">
-                <i class="fas fa-brain"></i> AI & Data
-            </button>
-            <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="other" onclick="filterSkills('other', this)">
-                <i class="fas fa-toolbox"></i> Other Tools
-            </button>
-        </div>
+  <button class="filter-btn active flex items-center justify-center gap-2 px-4 py-2" data-filter="main">
+    <i class="fas fa-star"></i> Main Skills
+  </button>
+  <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="frontend">
+    <i class="fas fa-paint-brush"></i> Frontend
+  </button>
+  <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="backend">
+    <i class="fas fa-server"></i> Backend
+  </button>
+  <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="ai">
+    <i class="fas fa-brain"></i> AI & Data
+  </button>
+  <button class="filter-btn flex items-center justify-center gap-2 px-4 py-2" data-filter="other">
+    <i class="fas fa-toolbox"></i> Other Tools
+  </button>
+</div>
 
         <!-- Skills Grid -->
         <div id="skills-grid" class="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto animate-slide">
             <!-- MAIN SKILLS -->
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-python text-3xl text-yellow-400"></i>
                 <div>Python</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-code text-3xl text-pink-400"></i>
                 <div>FastAPI</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-robot text-3xl text-green-400"></i>
                 <div>n8n</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-database text-3xl text-blue-400"></i>
                 <div>SQL</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-brain text-3xl text-purple-300"></i>
                 <div>LLMs</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-project-diagram text-3xl text-orange-400"></i>
                 <div>LangChain</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="main">
+            <div class="skill-card main flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-file-excel text-3xl text-green-500"></i>
                 <div>Excel</div>
             </div>
 
             <!-- FRONTEND SKILLS -->
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-html5 text-3xl text-orange-500"></i>
                 <div>HTML</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
                 <div>CSS</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-brush text-3xl text-pink-300"></i>
                 <div>Sass</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-js text-3xl text-yellow-400"></i>
                 <div>JavaScript</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-react text-3xl text-cyan-400"></i>
                 <div>React</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-wind text-3xl text-purple-400"></i>
                 <div>Tailwind</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="frontend">
+            <div class="skill-card frontend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-figma text-3xl text-pink-500"></i>
                 <div>Figma</div>
             </div>
 
             <!-- BACKEND SKILLS -->
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-python text-3xl text-yellow-300"></i>
                 <div>Python</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-c text-3xl text-gray-400"></i>
                 <div>C</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-node-js text-3xl text-green-400"></i>
                 <div>Node.js</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-php text-3xl text-indigo-400"></i>
                 <div>PHP</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-database text-3xl text-teal-400"></i>
                 <div>SQL</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="backend">
+            <div class="skill-card backend flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-chart-bar text-3xl text-pink-400"></i>
                 <div>SAS</div>
             </div>
 
             <!-- AI & DATA SKILLS -->
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-robot text-3xl text-pink-400"></i>
                 <div>OpenAI</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-brain text-3xl text-purple-300"></i>
                 <div>Claude</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-network-wired text-3xl text-yellow-300"></i>
                 <div>LangChain</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-layer-group text-3xl text-blue-300"></i>
                 <div>MCP</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-code text-3xl text-green-400"></i>
                 <div>FastAPI</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-cubes text-3xl text-indigo-400"></i>
                 <div>Pydantic</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-project-diagram text-3xl text-blue-200"></i>
                 <div>scikit-learn</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-search text-3xl text-pink-300"></i>
                 <div>Isolation Forest</div>
             </div>
@@ -258,49 +258,49 @@
                 <i class="fas fa-plug text-3xl text-green-300"></i>
                 <div>n8n</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-table text-3xl text-yellow-200"></i>
                 <div>Pandas</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-file-excel text-3xl text-green-300"></i>
                 <div>Excel</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-chart-line text-3xl text-purple-200"></i>
                 <div>Tableau</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="ai">
+            <div class="skill-card ai flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-chart-pie text-3xl text-blue-200"></i>
                 <div>Power BI</div>
             </div>
 
             <!-- OTHER SKILLS -->
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-git-alt text-3xl text-orange-400"></i>
                 <div>Git</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-github text-3xl text-white"></i>
                 <div>GitHub</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-database text-3xl text-pink-400"></i>
                 <div>PostgreSQL</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-database text-3xl text-teal-300"></i>
                 <div>MySQL</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-server text-3xl text-yellow-300"></i>
                 <div>XAMPP</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">>
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fab fa-docker text-3xl text-blue-400"></i>
                 <div>Docker</div>
             </div>
-            <div class="skill-card flex flex-col items-center justify-center gap-2 text-white p-4" data-category="other">
+            <div class="skill-card other flex flex-col items-center justify-center gap-2 text-white p-4">
                 <i class="fas fa-database text-3xl text-purple-300"></i>
                 <div>DBeaver</div>
             </div>
@@ -763,5 +763,6 @@
 
 
 <script src="script.js"></script>
+
 </body>
 </html>
