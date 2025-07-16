@@ -695,19 +695,13 @@
 
 <!-- BrimmBot Widget -->
 <div id="brimmbot-widget">
-  <div id="brimmbot-button" onclick="toggleBrimmBot()" class="glow">
+  <div id="brimmbot-button" class="glow">
   🤖
 </div>
 
   <iframe id="brimmbot-frame" src="brimmbot.html" style="display:none;"></iframe>
 </div>
 
-<script>
-  function toggleBrimmBot() {
-    const frame = document.getElementById("brimmbot-frame");
-    frame.style.display = frame.style.display === "none" ? "block" : "none";
-  }
-</script>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function (e) {

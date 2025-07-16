@@ -18,6 +18,7 @@ function toggleBrimmBot() {
 
 // Make function globally available
 window.toggleBrimmBot = toggleBrimmBot
+document.getElementById("brimmbot-button")?.addEventListener("click", toggleBrimmBot);
 
 // Enhanced launch BrimmBot function
 function launchBrimmBotFromPage() {
