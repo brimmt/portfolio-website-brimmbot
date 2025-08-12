@@ -328,186 +328,158 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                  <!-- Project 1 -->
-            <div class="project-card card flex flex-col justify-between" data-category="Frontend Backend">
-                <div class="relative">
-                    <img src="images/blogpost2.png" alt="Portfolio Website" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Ongoing</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-                    <p class="text-gray-400 mb-4">A responsive personal website to showcase my projects, skills, and chatbot assistant — built with a clean design, smooth navigation, and custom animations.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
-                        </a>
-                        <a href="pages/portfolio.html" class="btn btn-primary inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch" id="projects-grid">
 
-            <!-- Project 2 -->
-            <div class="project-card card flex flex-col justify-between" data-category="AI Automation Frontend Backened">
-                <div class="relative">
-                    <img src="images/BrimmBot-image.png" alt="BrimmBot Chat Assistant" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Completed</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">BrimmBot Chat Assistant V1</h3>
-                    <p class="text-gray-400 mb-4">BrimmBot is your friendly AI guide to all things Tatiana — from tech skills to career goals, served with style.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">OpenAI</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
-                        </a>
-                        <a href="pages/BBot.html" class="btn btn-primary inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+              <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5">
+  <!-- Fixed-ratio media area; badge overlays -->
+  <div class="relative aspect-[16/9]">
+    <img src="images/blogpost2.png" alt="Healthcare Dataset" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">Ongoing</span>
+  </div>
+
+  <!-- Content grows; buttons pin to bottom -->
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+    <p class="text-gray-400 mb-4">
+      A responsive personal website to showcase my projects, skills, and chatbot assistant — built with a clean design, smooth navigation, and custom animations.
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">CSS</span>
+      <span class="tech-tag">JavaScript</span>
+    </div>
+
+    <div class="mt-auto pt-4 flex gap-4">
+      <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="fab fa-github mr-2"></i> GitHub
+      </a>
+      <a href="pages/portfolio.html" class="btn btn-primary inline-flex items-center">
+        <i class="fas fa-external-link-alt mr-2"></i> Learn More
+      </a>
+    </div>
+  </div>
+</div>
+
+            <!-- BrimmBot Chat Assistant V1 -->
+<div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5" data-category="AI Automation Frontend Backened">
+  <div class="relative aspect-[16/9]">
+    <img src="images/BrimmBot-image.png" alt="BrimmBot Chat Assistant" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">Completed</span>
+  </div>
+
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">BrimmBot Chat Assistant V1</h3>
+    <p class="text-gray-400 mb-4">BrimmBot is your friendly AI guide to all things Tatiana — from tech skills to career goals, served with style.</p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">OpenAI</span>
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">CSS</span>
+      <span class="tech-tag">JavaScript</span>
+    </div>
+
+    <div class="mt-auto pt-4 flex gap-4">
+      <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="fab fa-github mr-2"></i> GitHub
+      </a>
+      <a href="pages/BBot.html" class="btn btn-primary inline-flex items-center">
+        <i class="fas fa-external-link-alt mr-2"></i> Learn More
+      </a>
+    </div>
+  </div>
+</div>
 
             <!-- Project 3 -->
-            <div class="project-card card flex flex-col justify-between" data-category="Frontend Backend">
-                <div class="relative">
-                    <img src="images/weatherapp1.jpg" alt="Weather App" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Completed</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Mini Weather APP V1</h3>
-                    <p class="text-gray-400 mb-4">A responsive weather app that displays real-time forecasts and location-based conditions, powered by a FastAPI backend.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
-                        </a>
-                        <a href="pages/weather.html" class="btn btn-primary inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <!-- Mini Weather APP V1 -->
+<div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5" data-category="Frontend Backend">
+  <div class="relative aspect-[16/9]">
+    <img src="images/weatherapp1.jpg" alt="Weather App" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">Completed</span>
+  </div>
+
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">Mini Weather APP V1</h3>
+    <p class="text-gray-400 mb-4">A responsive weather app that displays real-time forecasts and location-based conditions, powered by a FastAPI backend.</p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">CSS</span>
+      <span class="tech-tag">JavaScript</span>
+    </div>
+
+    <div class="mt-auto pt-4 flex gap-4">
+      <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="fab fa-github mr-2"></i> GitHub
+      </a>
+      <a href="pages/weather.html" class="btn btn-primary inline-flex items-center">
+        <i class="fas fa-external-link-alt mr-2"></i> Learn More
+      </a>
+    </div>
+  </div>
+</div>
 
             <!-- Project 4 Healthcare Dataset Project -->
-            <div class="project-card card flex flex-col justify-between" data-category="Data">
-                <div class="relative">
-                    <img src="images/HDD-Image.png" alt="Healthcare Dataset" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Completed</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Healthcare Dataset Project</h3>
-                    <p class="text-gray-400 mb-4">Cleaned and standardized over 50,000 rows of hospital data to build a Tableau dashboard focused on clinical and operational trends. Future versions will include an AI-powered frontend with workflow recommendations.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">Data Cleaning</span>
-                    </div>
-                    <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
-                        </a>
-                        <a href="pages/HDD.html" class="btn btn-primary inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5">
+  <!-- Fixed-ratio media area; badge overlays -->
+  <div class="relative aspect-[16/9]">
+    <img src="images/HDD-Image.png" alt="Healthcare Dataset" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">Completed</span>
+  </div>
 
-            <!-- Project 5 - Proposal AI 
-            <div class="project-card card flex flex-col justify-between" data-category="Backend Frontend AI Automation">
-                <div class="relative">
-                    <img src="images/ProposalAI.jpg" alt="Project 5" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Proposal AI V1</h3>
-                    <p class="text-gray-400 mb-4">Proposal AI is designed to help professionals quickly generate clean, persuasive business proposals based on goals, tone, and audience. All driven by AI automation and customizable templates.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenAi</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Supabase</span>
-                    </div>
-                    <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
-                        </a>
-                         <a href="pages/proposal.html" class="btn btn-primary inline-flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div> -->
+  <!-- Content grows; buttons pin to bottom -->
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">Healthcare Dataset Project</h3>
+    <p class="text-gray-400 mb-4">
+      Cleaned and standardized over 50,000 rows of hospital data to build a Tableau dashboard focused on clinical and operational trends. Future versions will include an AI-powered frontend with workflow recommendations.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">Excel</span>
+      <span class="tech-tag">Tableau</span>
+      <span class="tech-tag">Data Cleaning</span>
+    </div>
+
+    <div class="mt-auto pt-4 flex gap-4">
+      <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="fab fa-github mr-2"></i> GitHub
+      </a>
+      <a href="pages/HDD.html" class="btn btn-primary inline-flex items-center">
+        <i class="fas fa-external-link-alt mr-2"></i> Learn More
+      </a>
+    </div>
+  </div>
+</div>
+
+            
 
             <!-- Project 6 -->
-            <div class="project-card card flex flex-col justify-between" data-category="Frontend Backend AI Automation">
-                <div class="relative">
-                    <img src="images/JSA-IMAGE.png" alt="Project 6" class="w-full h-48 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <span class="badge bg-purple-600">Coming Soon</span>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Job Seeker AI</h3>
-                    <p class="text-gray-400 mb-4">An AI-powered tool designed to help job seekers instantly generate resumes, personalized cover letters, and tailored job search strategies based on industry, tone, and goals.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">MCP</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Supabase</span>
+            <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5" data-category="Frontend Backend AI Automation">
+  <div class="relative aspect-[16/9]">
+    <img src="images/JSA-IMAGE.png" alt="Job Seeker AI" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">Coming Soon</span>
+  </div>
 
-                    </div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">Job Seeker AI</h3>
+    <p class="text-gray-400 mb-4">An AI-powered tool designed to help job seekers instantly generate resumes, personalized cover letters, and tailored job search strategies based on industry, tone, and goals.</p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">LangChain</span>
+      <span class="tech-tag">MCP</span>
+      <span class="tech-tag">LLMs</span>
+      <span class="tech-tag">HTML</span>
+      <span class="tech-tag">CSS</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">Supabase</span>
+    </div>
                     <div class="mt-auto pt-4 flex gap-4">
                         <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                             <i class="fab fa-github mr-2"></i>
@@ -523,6 +495,8 @@
         </div>
             
 
+
+
             <div class="text-center mt-12">
                 <a href="/Brimm-Tatiana-Resume 2.docx" download class="glow-btn btn btn-primary px-12 py-4 text-xl font-semibold">
                     <i class="fas fa-download mr-3"></i>
@@ -533,75 +507,210 @@
         </div>
     </section>
 
-    <!-- Services Section --> 
-<!-- Services Section -->
-<section id="services" class="py-20 relative z-10 text-center" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+    <!-- Services Section -->
+<section id="services" class="relative z-10 py-20 text-center" data-aos="fade-up">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <h2 class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-4xl font-bold text-transparent lg:text-5xl">
       Services
     </h2>
-    <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-      Exciting tools are on the way — Customizable BrimmBot, Job Seeker AI, and more. Full service offerings launching Fall 2025. 🚀
+    <p class="mx-auto mb-8 mt-3 max-w-2xl text-xl text-gray-400">
+      Exciting tools are on the way — Job Seeker AI, and more. Full service offerings launching Fall 2025. 🚀
     </p>
-    <span class="inline-block px-6 py-3 bg-gray-800 text-white text-sm uppercase tracking-widest rounded-full">
+    <span class="inline-block rounded-full bg-gray-800 px-6 py-3 text-sm uppercase tracking-widest text-white">
       Coming Soon
     </span>
   </div>
-  <!-- Mailchimp Signup Prompt
-<div class="mt-8 text-center">
-  <p class="text-lg text-gray-300 mb-4">
-    Want to stay updated or be notified when these services launch?  
-    <span class="block sm:inline">Join the mailing list below.</span>
+
+  <!-- Service Cards -->
+  <div class="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur">
+      <h3 class="text-lg font-semibold">Job Seeker AI (Beta)</h3>
+      <p class="mt-2 text-sm text-gray-300">
+        Resume builder, auto-apply, interview prep, and saved jobs dashboard.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur">
+      <h3 class="text-lg font-semibold">Custom Retro RP Emulator</h3>
+      <p class="mt-2 text-sm text-gray-300">
+        Fully tailored retro roleplay game servers, from emulator setup to custom features and live hosting.
+      </p>
+    </article>
+    <article class="rounded-2xl border border-white/10 bg-white/5 p-6 text-left backdrop-blur">
+      <h3 class="text-lg font-semibold">Freelance Work – Custom Builds</h3>
+      <p class="mt-2 text-sm text-gray-300">
+        Custom software solutions for clients who prefer unique builds — designed, coded, and deployed to fit your needs.
+      </p>
+    </article>
+  </div>
+
+  <!-- Mailing List CTA -->
+  <div class="mx-auto mt-16 max-w-6xl rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-6 sm:p-8">
+    <div class="grid items-center gap-8 md:grid-cols-2">
+      <div class="text-left">
+        <h3 class="text-2xl font-semibold tracking-tight">Join the Job Seeker AI Beta</h3>
+        <p class="mt-2 text-gray-300">
+          Early access, feature drops, and launch invites. No spam. Unsubscribe anytime.
+        </p>
+      </div>
+
+      <!-- Form posts to your backend (we'll build it tomorrow) -->
+      <form id="subscribe-form" class="flex w-full flex-col gap-3" novalidate>
+  <!-- Honeypot -->
+  <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off">
+
+  <label for="first_name" class="sr-only">First Name</label>
+  <input
+    id="first_name"
+    name="first_name"
+    type="text"
+    placeholder="First Name"
+    required
+    class="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none focus:border-blue-400"
+  />
+
+  <label for="last_name" class="sr-only">Last Name</label>
+  <input
+    id="last_name"
+    name="last_name"
+    type="text"
+    placeholder="Last Name"
+    required
+    class="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none focus:border-blue-400"
+  />
+
+  <label for="email" class="sr-only">Email address</label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    required
+    placeholder="Email Address"
+    class="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder-gray-400 outline-none focus:border-blue-400"
+  />
+
+  <button
+    id="subscribe-btn"
+    type="submit"
+    class="rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-3 text-sm font-semibold text-white shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black/20"
+  >
+    Join Mailing List
+  </button>
+
+  <p class="text-xs text-gray-400">
+    By subscribing, you agree to receive product updates. See our
+    <a href="/pages/privacy-policy.html" class="underline">Privacy Policy</a>.
   </p>
 
-  <form action="https://us15.admin.mailchimp.com/" method="POST" target="_blank" class="flex flex-col sm:flex-row justify-center gap-2">
-    <input 
-      type="email" 
-      name="EMAIL" 
-      placeholder="Enter your email" 
-      required 
-      class="px-4 py-2 rounded-md text-black w-full sm:w-auto"
-    >
-    <button type="submit" class="btn btn-primary">
-      Notify Me
-    </button>
-  </form> -->
-</div>
+  <div id="subscribe-msg" class="hidden rounded-lg px-3 py-2 text-sm"></div>
+</form>
+    </div>
+  </div>
 </section>
 
 
 
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-20 relative z-10" data-aos="fade-up">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                    Learning Journal
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Documenting my journey in tech and sharing insights
-                </p>
-            </div>
+   <!-- Blog / Learning Journal -->
+<section id="blog" class="py-20 relative z-10" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        Learning Journal
+      </h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        Documenting my journey in tech and sharing insights
+      </p>
+    </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card">
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
-                            <i class="fas fa-calendar mr-2"></i>
-                            July 2025
-                            <span class="badge ml-auto">Learning</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 hover:text-purple-400 transition-colors cursor-pointer">
-                            Building My Portfolio
-                        </h3>
-                        <p class="text-gray-400 mb-4">Documenting my progress through algorithmic problem solving and data structures...</p>
-                        <a href="pages/blog-post.html" class="text-purple-400 hover:underline">Read more →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Cards grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1: NEW post -->
+      <article class="rounded-2xl border border-white/10 bg-gray-800/60 backdrop-blur p-5 
+                hover:border-purple-500/40 transition flex flex-col justify-between">
+  <a href="/pages/blog-post 0809.html" class="flex flex-col h-full group">
+    <!-- Thumbnail -->
+    <img src="/images/blog-post 0809.png"
+         alt="Graduated… and Still Learning Every Day"
+         class="w-full h-40 object-cover rounded-xl mb-4 opacity-95 group-hover:opacity-100 transition" />
+
+    <div>
+      <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+        <i class="fas fa-calendar mr-2"></i>
+        Aug 9, 2025
+        <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs
+                       bg-gradient-to-r from-purple-600 to-indigo-600 text-white/90">
+          #Mindset
+        </span>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold mb-2 text-white group-hover:text-purple-300 transition">
+        Graduated… and Still Learning Every Day
+      </h3>
+      <p class="text-gray-300/80 mb-4">
+        Graduation isn’t the finish line, it’s the starting gun. How I ship while I learn and why that’s enough.
+      </p>
+    </div>
+
+    <!-- Bottom "Read more" link -->
+    <span class="mt-auto text-purple-400 group-hover:underline">Read more →</span>
+  </a>
+</article>
+
+  <!-- Card 2 -->
+      <article class="rounded-2xl border border-white/10 bg-gray-800/60 backdrop-blur p-5 
+                hover:border-purple-500/40 transition flex flex-col justify-between">
+  <a href="/pages/blog-post.html" class="flex flex-col h-full group">
+    <!-- Thumbnail -->
+    <img src="/images/blogpost2.png"
+         alt="Graduated… and Still Learning Every Day"
+         class="w-full h-40 object-cover rounded-xl mb-4 opacity-95 group-hover:opacity-100 transition" />
+    
+    <!-- Top content -->
+    <div>
+      <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+        <i class="fas fa-calendar mr-2"></i>
+        Aug 9, 2025
+        <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs
+                       bg-gradient-to-r from-purple-600 to-indigo-600 text-white/90">
+          #Learning
+        </span>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold mb-2 text-white group-hover:text-purple-300 transition">
+        Building my Portfolio
+      </h3>
+      <p class="text-gray-300/80 mb-4">
+Creating my portfolio website wasn’t easy, but it was worth every step. Here’s how I used AI to bring my vision to life from scratch.      </p>
+    </div>
+
+    <!-- Bottom "Read more" link -->
+    <span class="mt-auto text-purple-400 group-hover:underline">Read more →</span>
+  </a>
+</article>
+
+      <!-- Card 3 (example placeholder) 
+       <article class="rounded-2xl border border-white/10 bg-gray-800/60 backdrop-blur p-5 hover:border-purple-500/40 transition">
+        <a href="/blog/n8n-mailchimp-pipeline" class="block group">
+          <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+            <i class="fas fa-calendar mr-2"></i>
+            Coming soon
+            <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs
+                           bg-gradient-to-r from-green-600 to-blue-600 text-white/90">
+              #Automation
+            </span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold mb-2 text-white group-hover:text-purple-300 transition">
+            Wiring n8n → Mailchimp (Playbook)
+          </h3>
+          <p class="text-gray-300/80 mb-4">
+            The exact steps I used to connect my site forms to lists, tags, and logs.
+          </p>
+          <span class="text-purple-400 group-hover:underline">Read more →</span>
+        </a>
+      </article>
+    </div> -->
+
+    
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 relative z-10" data-aos="fade-up">
@@ -614,6 +723,9 @@
                     Ready to collaborate on your next project or just want to chat about tech?
                 </p>
             </div>
+            <div style="background: #d385e2; color: #000; text-align: center; padding: 10px; font-weight: bold;">
+  📢 Contact form is currently under maintenance — please email me directly at <a href="mailto:brimmtatiana@gmail.com">brimmtatiana@gmail.com</a>
+</div>
 
             <div class="grid md:grid-cols-2 gap-12">
   <!-- Contact Info (Left side) -->
@@ -654,8 +766,8 @@
     <h3 class="text-xl font-bold mb-6">Send a Message</h3>
                 <form id="contact-form" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input type="text" name="firstName" placeholder="First Name" class="input" required>
-                    <input type="text" name="lastName" placeholder="Last Name" class="input" required>
+                    <input type="text" name="first_name" placeholder="First Name" class="input" required>
+                    <input type="text" name="last_name" placeholder="Last Name" class="input" required>
                 </div>
                             <input type="email" name="email" placeholder="Email" class="input" required>
                             <input type="text" name="subject" placeholder="Subject" class="input" required>
@@ -703,57 +815,7 @@
 </div>
 
 
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const form = this;
-    const sendBtn = form.querySelector("button[type='submit']");
-
-    const firstName = form.querySelector("input[name='firstName']").value;
-    const lastName = form.querySelector("input[name='lastName']").value;
-    const email = form.querySelector("input[name='email']").value;
-    const subject = form.querySelector("input[name='subject']").value;
-    const message = form.querySelector("textarea[name='message']").value;
-
-    const fullName = `${firstName} ${lastName}`;
-
-    // Disable button and show loading
-    sendBtn.disabled = true;
-    sendBtn.innerText = "Sending...";
-
-    // Send to Tatiana
-    emailjs.send("service_cseajhm", "template_mohxl2k", {
-      from_name: fullName,
-      reply_to: email,
-      subject: subject,
-      message: message
-    }).then(() => {
-      console.log("Message sent to Tatiana.");
-    }).catch((err) => {
-      console.error("Failed to send to Tatiana:", err);
-    });
-
-    // Send confirmation to user
-    emailjs.send("service_cseajhm", "template_zfjy541", {
-      from_name: fullName,
-      email: email
-    }).then(() => {
-      // ✅ Show popup and reset form
-      document.getElementById("success-popup").style.display = "flex";
-      form.reset();
-    }).catch((err) => {
-      alert("Oops, something went wrong: " + err.text);
-    }).finally(() => {
-      sendBtn.disabled = false;
-      sendBtn.innerText = "Send Message";
-    });
-  });
-
-  function closeSuccessPopup() {
-    document.getElementById("success-popup").style.display = "none";
-  }
-</script>
 
 
 <script src="script.js"></script>
