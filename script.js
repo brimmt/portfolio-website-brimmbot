@@ -204,42 +204,47 @@ document.addEventListener("DOMContentLoaded", () => {
   filterSkills("main", document.querySelector('[data-filter="main"]'))
 })
 
+const API_BASE =
+  ["localhost", "127.0.0.1"].includes(window.location.hostname)
+    ? "http://127.0.0.1:8000"
+    : "https://portfolio-backend-yzg8.onrender.com"; // <-- paste your Render URL
+
 document.getElementById("subscribe-form").addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const firstName = document.getElementById("first_name").value.trim();
-  const lastName = document.getElementById("last_name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const honeypot = document.getElementById("company").value.trim(); // spam trap
-  const msgBox = document.getElementById("subscribe-msg");
+  const lastName  = document.getElementById("last_name").value.trim();
+  const email     = document.getElementById("email").value.trim();
+  const honeypot  = document.getElementById("company").value.trim(); // spam trap
+  const msgBox    = document.getElementById("subscribe-msg");
 
-  // Early spam bot check
   if (honeypot) {
     msgBox.textContent = "Submission blocked.";
-    msgBox.classList.remove("hidden");
-    msgBox.classList.add("bg-red-500", "text-white");
+    msgBox.classList.remove("hidden"); msgBox.classList.add("bg-red-500","text-white");
     return;
   }
 
   try {
-    const res = await fetch("http://127.0.0.1:8000/api/subscribe", {
+    const res = await fetch(`${API_BASE}/api/subscribe`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        first_name: firstName,
-        last_name: lastName,
-        email: email
-      }),
+      body: JSON.stringify({ first_name: firstName, last_name: lastName, email }),
     });
 
-    const data = await res.json();
-    msgBox.textContent = data.message || "Thanks for subscribing! Please Check your mailbox to confirm";
-    msgBox.classList.remove("hidden");
-    msgBox.classList.add("bg-green-500", "text-white");
+    // robust error handling
+    let data;
+    try { data = await res.json(); }
+    catch { throw new Error(`Non-JSON response (status ${res.status})`); }
+
+    if (!res.ok) throw new Error(data.detail || data.message || `HTTP ${res.status}`);
+
+    msgBox.textContent = data.message || "Thanks for subscribing! Check your email to confirm.";
+    msgBox.classList.remove("hidden"); msgBox.classList.add("bg-green-500","text-white");
   } catch (err) {
+    console.error(err);
     msgBox.textContent = "Something went wrong. Please try again.";
-    msgBox.classList.remove("hidden");
-    msgBox.classList.add("bg-red-500", "text-white");
+    msgBox.classList.remove("hidden"); msgBox.classList.add("bg-red-500","text-white");
   }
 });
+
+
 
