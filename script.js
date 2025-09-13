@@ -1,5 +1,14 @@
+;(() => {
+  const guess =
+    ["localhost","127.0.0.1"].includes(location.hostname)
+      ? "http://127.0.0.1:8000"
+      : "https://portfolio-backend-yzg8.onrender.com"; // Render URL
+  // Only set if not already set by another script
+  window.API_BASE = window.API_BASE || guess;
+})();
 
-       // Enhanced BrimmBot function
+
+// Enhanced BrimmBot function
 function toggleBrimmBot() {
   const frame = document.getElementById("brimmbot-frame")
   const button = document.getElementById("brimmbot-button")
@@ -37,42 +46,44 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // Contact form handling
-//document.addEventListener("DOMContentLoaded", () => {
-  //const contactForm = document.getElementById("contact-form");
+const API_BASE = window.API_BASE;
 
-  //if (contactForm) {
-    //contactForm.addEventListener("submit", async (e) => {
-     // e.preventDefault();
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(contactForm);
+    const body = {
+      first_name: fd.get("first_name")?.toString().trim(),
+      last_name:  fd.get("last_name")?.toString().trim(),
+      email:      fd.get("email")?.toString().trim(),
+      subject:    fd.get("subject")?.toString().trim(),
+      message:    fd.get("message")?.toString().trim(),
+      company:    fd.get("company")?.toString().trim(), // honeypot
+    };
 
-      //const formData = new FormData(contactForm);
-      //const data = {
-  //name: formData.get("from_name"),
-  //email: formData.get("reply_to"),
-  //message: formData.get("message"),
-//};
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.classList.add("opacity-60","cursor-not-allowed");
 
-      //try {
-        //const response = await fetch("http://localhost:8000/send-email/", {
-         // method: "POST",
-          //headers: {
-          //  "Content-Type": "application/x-www-form-urlencoded",
-          //},
-          //body: new URLSearchParams(data),
-        //});
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(body),
+      });
+      let data; try { data = await res.json(); } catch { data = {}; }
+      if (!res.ok) throw new Error(data.detail || `HTTP ${res.status}`);
 
-        //const result = await response.json();
-        //if (result.success) {
-         // showSuccessPopup();
-         // contactForm.reset();
-        //} else {
-        //  alert("Failed to send message: " + result.message);
-        //}
-     // } catch (err) {
-      //  console.error("Error:", err);
-      //  alert("Something went wrong. Please try again.");
-      //}
-    //});
-  //}
+      showSuccessPopup();
+      contactForm.reset();
+    } catch (err) {
+      console.error(err);
+      alert("Couldnt send your message. Please email me directly.");
+    } finally {
+      btn.disabled = false; btn.classList.remove("opacity-60","cursor-not-allowed");
+    }
+  });
+}
 
   // Show success popup
   function showSuccessPopup() {
@@ -204,10 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
   filterSkills("main", document.querySelector('[data-filter="main"]'))
 })
 
-const API_BASE =
-  ["localhost", "127.0.0.1"].includes(window.location.hostname)
-    ? "http://127.0.0.1:8000"
-    : "https://portfolio-backend-yzg8.onrender.com"; // <-- paste your Render URL
+// Mailchimp
+
 
 document.getElementById("subscribe-form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -245,6 +254,7 @@ document.getElementById("subscribe-form").addEventListener("submit", async (e) =
     msgBox.classList.remove("hidden"); msgBox.classList.add("bg-red-500","text-white");
   }
 });
+
 
 
 
