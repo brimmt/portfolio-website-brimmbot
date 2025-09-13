@@ -424,8 +424,41 @@
   </div>
 </div>
 
-            <!-- Project 4 Healthcare Dataset Project -->
+                       <!-- Project 5 Proposal AI -->
             <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5">
+  <!-- Fixed-ratio media area; badge overlays -->
+  <div class="relative aspect-[16/9]">
+    <img src="images/proposalai.png" alt="Proposal AI" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">MVP In Progress</span>
+  </div>
+
+  <!-- Content grows; buttons pin to bottom -->
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="text-xl font-bold mb-2">Proposal AI</h3>
+    <p class="text-gray-400 mb-4">
+      AI-powered assistant that transforms RFPs and client notes into polished, branded proposals. Upload, summarize, draft, and export — saving time and standardizing client deliverables.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">Supabase</span>
+      <span class="tech-tag">Tailwind</span>
+      <span class="tech-tag">Next.js</span>
+    </div>
+
+    <div class="mt-auto pt-4 flex gap-4">
+      <a href="https://github.com/brimmt/proposal_ai/tree/main" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <i class="fab fa-github mr-2"></i> GitHub
+      </a>
+      <a href="pages/proposal.html" class="btn btn-primary inline-flex items-center">
+        <i class="fas fa-external-link-alt mr-2"></i> Learn More
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--Project Health Care Dataset-->
+ <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5">
   <!-- Fixed-ratio media area; badge overlays -->
   <div class="relative aspect-[16/9]">
     <img src="images/HDD-Image.png" alt="Healthcare Dataset" class="absolute inset-0 h-full w-full object-cover block">
@@ -456,13 +489,15 @@
   </div>
 </div>
 
+
+
             
 
             <!-- Project 6 -->
             <div class="project-card card h-full flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5" data-category="Frontend Backend AI Automation">
   <div class="relative aspect-[16/9]">
-    <img src="images/JSA-IMAGE.png" alt="Job Seeker AI" class="absolute inset-0 h-full w-full object-cover block">
-    <span class="absolute top-2 right-2 badge bg-purple-600">Coming Soon</span>
+    <img src="images/JSA 1-IMAGE.png" alt="Job Seeker AI" class="absolute inset-0 h-full w-full object-cover block">
+    <span class="absolute top-2 right-2 badge bg-purple-600">MVP In Progress</span>
   </div>
 
   <div class="flex flex-1 flex-col p-6">
@@ -472,8 +507,6 @@
     <div class="flex flex-wrap gap-2 mb-4">
       <span class="tech-tag">Python</span>
       <span class="tech-tag">FastAPI</span>
-      <span class="tech-tag">LangChain</span>
-      <span class="tech-tag">MCP</span>
       <span class="tech-tag">LLMs</span>
       <span class="tech-tag">HTML</span>
       <span class="tech-tag">CSS</span>
@@ -481,7 +514,7 @@
       <span class="tech-tag">Supabase</span>
     </div>
                     <div class="mt-auto pt-4 flex gap-4">
-                        <a href="https://github.com/brimmt" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <a href="https://github.com/brimmt/jobseeker_ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                             <i class="fab fa-github mr-2"></i>
                             GitHub
                         </a>
@@ -723,9 +756,9 @@ Creating my portfolio website wasn’t easy, but it was worth every step. Here�
                     Ready to collaborate on your next project or just want to chat about tech?
                 </p>
             </div>
-            <div style="background: #d385e2; color: #000; text-align: center; padding: 10px; font-weight: bold;">
+           <!-- <div style="background: #d385e2; color: #000; text-align: center; padding: 10px; font-weight: bold;">
   📢 Contact form is currently under maintenance — please email me directly at <a href="mailto:brimmtatiana@gmail.com">brimmtatiana@gmail.com</a>
-</div>
+</div> -->
 
             <div class="grid md:grid-cols-2 gap-12">
   <!-- Contact Info (Left side) -->
@@ -768,6 +801,7 @@ Creating my portfolio website wasn’t easy, but it was worth every step. Here�
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input type="text" name="first_name" placeholder="First Name" class="input" required>
                     <input type="text" name="last_name" placeholder="Last Name" class="input" required>
+                    <input type="text" name="company" class="hidden" autocomplete="off" tabindex="-1">
                 </div>
                             <input type="email" name="email" placeholder="Email" class="input" required>
                             <input type="text" name="subject" placeholder="Subject" class="input" required>
@@ -822,3 +856,4 @@ Creating my portfolio website wasn’t easy, but it was worth every step. Here�
 
 </body>
 </html>
+
